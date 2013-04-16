@@ -3,30 +3,21 @@ package com.example.wififregmentpractice;
 import java.util.Locale;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.webkit.WebView.FindListener;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -170,8 +161,8 @@ public class MainActivity extends FragmentActivity implements
 	 */
 	public static class WiFiOnOffFragment extends Fragment implements OnCheckedChangeListener {
 		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
+		 * 參考資料:
+		 * 	http://cooking-java.blogspot.tw/2010/07/android-wifi.html
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private WifiManager wiFiManager;
