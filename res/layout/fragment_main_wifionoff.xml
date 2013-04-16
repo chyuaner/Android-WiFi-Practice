@@ -12,20 +12,11 @@
 
     <ToggleButton
         android:id="@+id/wifiOn_toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ToggleButton" />
-
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TTT" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableLeft="@android:drawable/ic_lock_power_off"
+        android:text="ToggleButton"
+        android:textOff="@string/WiFi_Off"
+        android:textOn="@string/WiFi_On" />
 
 </LinearLayout>

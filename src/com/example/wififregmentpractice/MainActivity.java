@@ -131,9 +131,9 @@ public class MainActivity extends FragmentActivity implements
 				// getItem is called to instantiate the fragment for the given page.
 				// Return a DummySectionFragment (defined as a static inner class
 				// below) with the page number as its lone argument.
-				Fragment fragment = new DummySectionFragment();
+				Fragment fragment = new WiFiOnOffFragment();
 				Bundle args = new Bundle();
-				args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+				args.putInt(WiFiOnOffFragment.ARG_SECTION_NUMBER, position + 1);
 				fragment.setArguments(args);
 				return fragment;
 			case 1:
@@ -168,7 +168,7 @@ public class MainActivity extends FragmentActivity implements
 	 * A dummy fragment representing a section of the app, but that simply
 	 * displays dummy text.
 	 */
-	public static class DummySectionFragment extends Fragment implements OnCheckedChangeListener, OnClickListener {
+	public static class WiFiOnOffFragment extends Fragment implements OnCheckedChangeListener {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -176,10 +176,9 @@ public class MainActivity extends FragmentActivity implements
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private WifiManager wiFiManager;
 		private ToggleButton wifiOn_btn;
-		private Button toWiFiOnOffActivity_btn;
 		private Context mContext = null;
 		
-		public DummySectionFragment() {
+		public WiFiOnOffFragment() {
 		}
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
@@ -189,15 +188,8 @@ public class MainActivity extends FragmentActivity implements
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
+			View rootView = inflater.inflate(R.layout.fragment_main_wifionoff,
 					container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
-			
-			toWiFiOnOffActivity_btn = (Button)rootView.findViewById(R.id.button1);
-			toWiFiOnOffActivity_btn.setOnClickListener(this);
 			
 			wiFiManager = (WifiManager) mContext.getSystemService(Context.WIFI_SERVICE);
 			
@@ -226,15 +218,6 @@ public class MainActivity extends FragmentActivity implements
 						wiFiManager.setWifiEnabled(false);
 					}
 				}
-				break;
-			}
-		}
-		@Override
-		public void onClick(View arg0) {
-			switch(arg0.getId()){
-			case R.id.button1:
-				Intent intent = new Intent(super.getActivity(), OnOffActivity.class);
-				startActivity(intent);
 				break;
 			}
 		}

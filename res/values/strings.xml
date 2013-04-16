@@ -9,5 +9,7 @@
     <string name="title_activity_test_main">TestMainActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_on_off">OnOffActivity</string>
+    <string name="WiFi_On">無線網路開啟</string>
+    <string name="WiFi_Off">無線網路關閉</string>
 
 </resources>

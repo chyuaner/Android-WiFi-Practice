@@ -17,4 +17,22 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <!-- Botton Style -->
+    <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <!-- <item name="android:textSize">@dimen/text_size_small</item> -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dashboard_button_text</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="DashboardBottom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/Dashboard_Bottom_background</item>
+    </style>
 </resources>
