@@ -137,7 +137,7 @@ public class MainActivity extends FragmentActivity implements
 				fragment.setArguments(args);
 				return fragment;
 			case 1:
-				return new AboutFragment();
+				return new WiFiInfoFragment();
 			default:
 				return null;
 			}
@@ -154,9 +154,9 @@ public class MainActivity extends FragmentActivity implements
 			Locale l = Locale.getDefault();
 			switch (position) {
 			case 0:
-				return getString(R.string.title_section1).toUpperCase(l);
+				return getString(R.string.title_onoff).toUpperCase(l);
 			case 1:
-				return getString(R.string.title_section2).toUpperCase(l);
+				return getString(R.string.title_info).toUpperCase(l);
 			case 2:
 				return getString(R.string.title_section3).toUpperCase(l);
 			}
@@ -222,14 +222,14 @@ public class MainActivity extends FragmentActivity implements
 			}
 		}
 	}
-	public static class AboutFragment extends Fragment{
+	public static class WiFiInfoFragment extends Fragment{
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
 			
 			//對應Layout
-			View rootView = inflater.inflate(R.layout.about_layout, container, false);
+			View rootView = inflater.inflate(R.layout.wifi_info_layout, container, false);
 			
 			//顯示"Second"提示
 			Toast.makeText(getActivity(), "Second", Toast.LENGTH_SHORT).show();
