@@ -1,4 +1,4 @@
-package com.example.wififregmentpractice;
+package org.twbbs.yuan817.wififregmentpractice;
 
 import java.util.Locale;
 
@@ -198,13 +198,11 @@ public class MainActivity extends FragmentActivity implements
 			switch(arg0.getId()){
 			case R.id.wifiOn_toggleButton:
 				if(arg1){
-					Toast.makeText(getActivity(), "ON", Toast.LENGTH_SHORT).show();
 					if (!wiFiManager.isWifiEnabled()) {
 						wiFiManager.setWifiEnabled(true);
 					}
 				}
 				else {
-					Toast.makeText(getActivity(), "OFF", Toast.LENGTH_SHORT).show();
 					if (wiFiManager.isWifiEnabled()) {
 						wiFiManager.setWifiEnabled(false);
 					}
@@ -221,9 +219,6 @@ public class MainActivity extends FragmentActivity implements
 			
 			//對應Layout
 			View rootView = inflater.inflate(R.layout.wifi_info_layout, container, false);
-			
-			//顯示"Second"提示
-			Toast.makeText(getActivity(), "Second", Toast.LENGTH_SHORT).show();
 			
 			//回傳介面
 			return rootView;
